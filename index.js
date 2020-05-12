@@ -1,13 +1,11 @@
 const express = require('express');
+const path = require('path');
 const router = require('./router.js');
 
 const app = express();
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
-
+app.use(express.static('dist'));
+app.use(express.static(path.join(__dirname, 'dist')));
 app.use(router);
 
 const port = process.env.PORT || 1150;
