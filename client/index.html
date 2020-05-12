@@ -6,7 +6,14 @@
   <body>
     <h1>T A R G E T</h1>
     <div>carousel</div>
-    <div>shipping</div>
-    <div>reviews</div>
+    <div id="shippingComponent">shipping</div>
+    <div id="reviewComponent">reviews</div>
+    <script src="http://localhost:1128/bundle.js"></script>
+    <script>
+      ReactDOM.render(
+        React.createElement(App),
+        document.getElementById('shippingComponent')
+      );
+    </script>
   </body>
 </html>
